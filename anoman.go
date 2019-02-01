@@ -53,6 +53,7 @@ func main() {
 	temp.ProjectName = responses[0]
 	temp.Subtitle = responses[1]
 	temp.Author = responses[2]
+	temp.Year = responses[3]
 
 	// for testing you can use os.Stdin
 

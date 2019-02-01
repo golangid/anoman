@@ -20,7 +20,7 @@ const (
 
 #
 ### Author
-#### {{.Author}}
+#### {{.Author}} {{.Year}}
 	`
 )
 
@@ -29,6 +29,7 @@ type TemplateMD struct {
 	ProjectName string
 	Subtitle    string
 	Author      string
+	Year        string
 }
 
 // ParseOutput template
