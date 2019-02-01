@@ -8,18 +8,19 @@ import (
 
 const (
 	markdownTemplate = `
-	### {{toUpper .ProjectName}}
-	#
-	{{.Subtitle}}
+### {{toUpper .ProjectName}}
+#
+{{.Subtitle}}
+#
 
-	#### Usage:
-	- one
-	- two
-	- three
+#### Usage:
+- one
+- two
+- three
 
-	#
-	### Author
-	#### {{.Author}}
+#
+### Author
+#### {{.Author}}
 	`
 )
 
