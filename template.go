@@ -6,17 +6,6 @@ import (
 	"strings"
 )
 
-// package gojson
-
-// // generated automatically
-// // DO NOT EDIT !!
-
-// type {{.Title}} struct {
-// {{range $jsonName, $value := .Fields}}
-// 	{{(Title $jsonName)}} {{TypeOf $value}}` + " `" + `json:"{{$jsonName}}"` + "`" + `
-// {{end}}
-// }
-
 const (
 	markdownTemplate = `
 	### {{toUpper .ProjectName}}
