@@ -1,6 +1,6 @@
 ## Anoman
 
-Very simple markdown generator for your repository
+Very simple README generator for your repository
 
 #
 
