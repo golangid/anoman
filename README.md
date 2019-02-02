@@ -17,10 +17,38 @@ $
 $ echo just answer the given questions :)
 $
 $ project name ? : Anoman
-$ subtitle ? : anoman obong
-$ author name ? : Wuriyanto
+$
+$ website ? : www.anoman.com
+$
+$ project descriptions ? : README Generator for your project
+$
+$ notice ? : this project still in development, but ready to use
+$
+$ author name ? : golangid
+$
 $ year ? : 2019
 ```
+
+#### Result
+<div align="center">
+<h1>ANOMAN</h1>
+www.anoman.com
+</div>
+
+### What is Anoman?
+README Generator for your project
+
+> #### Important Notice
+> this project still in development, but ready to use
+
+### Usage:
+- one
+- two
+- three
+
+#
+### Author
+**golangid 2019**
 
 #
 
