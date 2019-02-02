@@ -11,7 +11,7 @@ import (
 
 const (
 	//Version of anoman
-	Version = "1.0.0"
+	Version = "dev"
 	// Banner of anoman
 	Banner = `
 	_________________________________
