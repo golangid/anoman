@@ -8,12 +8,12 @@ import (
 
 const (
 	markdownTemplate = `
-### {{toUpper .ProjectName}}
+## {{toUpper .ProjectName}}
 #
 {{.Subtitle}}
 #
 
-#### Usage:
+### Usage:
 - one
 - two
 - three
