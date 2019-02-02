@@ -20,6 +20,8 @@ var (
 func main() {
 	var (
 		outputName string
+		templateMD TemplateMD
+		responses  []string
 	)
 
 	flag.StringVar(&outputName, "output", "out.md", "output markdown name")
@@ -28,12 +30,6 @@ func main() {
 	flag.Parse()
 
 	reader := bufio.NewReader(os.Stdin)
-
-	var (
-		temp TemplateMD
-
-		responses []string
-	)
 
 	for _, question := range questions {
 
@@ -50,10 +46,10 @@ func main() {
 		responses = append(responses, response)
 	}
 
-	temp.ProjectName = responses[0]
-	temp.Subtitle = responses[1]
-	temp.Author = responses[2]
-	temp.Year = responses[3]
+	templateMD.ProjectName = responses[0]
+	templateMD.Subtitle = responses[1]
+	templateMD.Author = responses[2]
+	templateMD.Year = responses[3]
 
 	// for testing you can use os.Stdin
 
@@ -70,7 +66,7 @@ func main() {
 
 	defer file.Close()
 
-	if err := ParseOutput(temp, file); err != nil {
+	if err := ParseOutput(templateMD, file); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
