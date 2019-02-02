@@ -5,7 +5,20 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"runtime"
 	"strings"
+)
+
+const (
+	//Version of anoman
+	Version = "1.0.0"
+	// Banner of anoman
+	Banner = `
+	_________________________________
+	| |_*_| | \| |  | |\/| |_*_| | \| |
+	| |   | |\ \ |__| |  | |   | |\ | |
+	***********************************
+`
 )
 
 var (
@@ -19,15 +32,38 @@ var (
 
 func main() {
 	var (
-		outputName string
-		templateMD TemplateMD
-		responses  []string
+		outputName  string
+		showVersion bool
+		templateMD  TemplateMD
+		responses   []string
 	)
 
 	flag.StringVar(&outputName, "output", "out.md", "output markdown name")
 	flag.StringVar(&outputName, "o", "out.md", "output markdown name")
+	flag.BoolVar(&showVersion, "v", false, "show anoman version")
+	flag.BoolVar(&showVersion, "version", false, "show anoman version")
+
+	flag.Usage = func() {
+		printGreenText(Banner)
+		fmt.Println()
+		printGreenText("   **-----------------------------------------------**   \n")
+		fmt.Println()
+		printGreenText("    Anoman (Markdown Generator for your project)   \n")
+		fmt.Println()
+		printGreenText("	-o  | --output output markdown name eg: -o README.md\n")
+		printGreenText("	-v    | --version show anoman version\n")
+		printGreenText("	-h    | --help show help and usage\n")
+		fmt.Println()
+		printGreenText("   **-----------------------------------------------**   \n")
+		fmt.Println()
+	}
 
 	flag.Parse()
+
+	if showVersion {
+		printGreenText(fmt.Sprintf("%s version %s (runtime: %s) %s", os.Args[0], Version, runtime.Version(), "\n"))
+		os.Exit(0)
+	}
 
 	reader := bufio.NewReader(os.Stdin)
 
@@ -42,6 +78,8 @@ func main() {
 		}
 
 		response = strings.TrimSpace(response)
+
+		fmt.Println()
 
 		responses = append(responses, response)
 	}
