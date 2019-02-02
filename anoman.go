@@ -24,7 +24,9 @@ const (
 var (
 	questions = []string{
 		"project name ?",
-		"subtitle ?",
+		"website ?",
+		"project descriptions ?",
+		"notice ?",
 		"author name ?",
 		"year ?",
 	}
@@ -48,7 +50,7 @@ func main() {
 		fmt.Println()
 		printGreenText("   **-----------------------------------------------**   \n")
 		fmt.Println()
-		printGreenText("    Anoman (Markdown Generator for your project)   \n")
+		printGreenText("    Anoman (README Generator for your project)   \n")
 		fmt.Println()
 		printGreenText("	-o  | --output output markdown name eg: -o README.md\n")
 		printGreenText("	-v    | --version show anoman version\n")
@@ -85,9 +87,11 @@ func main() {
 	}
 
 	templateMD.ProjectName = responses[0]
-	templateMD.Subtitle = responses[1]
-	templateMD.Author = responses[2]
-	templateMD.Year = responses[3]
+	templateMD.Website = responses[1]
+	templateMD.Description = responses[2]
+	templateMD.Notice = responses[3]
+	templateMD.Author = responses[4]
+	templateMD.Year = responses[5]
 
 	// for testing you can use os.Stdin
 
