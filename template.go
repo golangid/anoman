@@ -10,7 +10,7 @@ const (
 	markdownTemplate = `
 <div align="center">
 <h1>{{toUpper .ProjectName}}</h1>
-{{.Website}}
+<a href="{{.Website}}">{{.Website}}</a>
 </div>
 
 ### What is {{.ProjectName}}?
