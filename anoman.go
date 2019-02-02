@@ -33,7 +33,7 @@ func main() {
 
 	for _, question := range questions {
 
-		fmt.Printf("%s : ", question)
+		printGreenText(fmt.Sprintf("%s : ", question))
 
 		response, err := reader.ReadString('\n')
 		if err != nil {
@@ -70,4 +70,8 @@ func main() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
+}
+
+func printGreenText(s string) {
+	fmt.Printf("\033[32m%s\033[0m", s)
 }
