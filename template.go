@@ -20,7 +20,7 @@ const (
 
 #
 ### Author
-#### {{.Author}} {{.Year}}
+**{{.Author}} {{.Year}}**
 	`
 )
 
