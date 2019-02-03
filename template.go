@@ -8,26 +8,34 @@ import (
 
 const (
 	markdownTemplate = `
-### {{toUpper .ProjectName}}
-#
-{{.Subtitle}}
-#
+<div align="center">
+<h1>{{toUpper .ProjectName}}</h1>
+<a href="{{.Website}}">{{.Website}}</a>
+</div>
 
-#### Usage:
+### What is {{.ProjectName}}?
+{{.Description}}
+
+> #### Important Notice
+> {{.Notice}}
+
+### Usage:
 - one
 - two
 - three
 
 #
 ### Author
-#### {{.Author}} {{.Year}}
+**{{.Author}} {{.Year}}**
 	`
 )
 
 // TemplateMD template
 type TemplateMD struct {
 	ProjectName string
-	Subtitle    string
+	Website     string
+	Description string
+	Notice      string
 	Author      string
 	Year        string
 }
