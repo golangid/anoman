@@ -8,11 +8,34 @@ Very simple README generator for your repository
 
 - validation
 
+### Installation
+- <b>Build from source</b>
+```shell
+$ go get github.com/golangid/anoman
+
+$ go build
+
+$ ./anoman -v
+```
+- <b>Mac OS</b>
+```shell
+$ brew tap golangid/tool
+
+$ brew install anoman
+```
+
+- <b>Get specific release (eg: for Linux)</b>
+```shell
+$ wget https://github.com/golangid/anoman/releases/download/v0.0.0/anoman-v0.0.0.linux-amd64.tar.gz
+
+$ tar -zxvf anoman-v0.0.0.linux-amd64.tar.gz
+
+$ anoman -v
+```
+
 ### Usage
 ```shell
-$ go build
-$ 
-$ ./anoman -o README.md
+$ anoman -o README.md
 $
 $ echo just answer the given questions :)
 $
