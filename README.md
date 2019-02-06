@@ -1,6 +1,9 @@
-## Anoman
-
+<div align="center">
+[<img src="./assets/logo-anoman-readme.png" width="250">](https://github.com/golangid/anoman)
+<br>
+<br>
 Very simple README generator for your repository
+</div>
 
 #
 
